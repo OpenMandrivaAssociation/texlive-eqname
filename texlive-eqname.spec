@@ -1,3 +1,9 @@
+# revision 20678
+# category Package
+# catalog-ctan /macros/latex/contrib/gene/eqname/eqname.sty
+# catalog-date 2010-12-04 00:54:21 +0100
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-eqname
 Version:	20101204
 Release:	1
@@ -35,6 +41,7 @@ picked up by a subsequent \label command.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/eqname/eqname.sty
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -45,3 +52,5 @@ picked up by a subsequent \label command.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

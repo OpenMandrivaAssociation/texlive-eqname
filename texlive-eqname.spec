@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-eqname
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	Name tags for equations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/eqname/eqname.sty

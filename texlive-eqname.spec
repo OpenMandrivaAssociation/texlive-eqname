@@ -1,6 +1,6 @@
 Name:		texlive-eqname
 Version:	20678
-Release:	1
+Release:	2
 Summary:	Name tags for equations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/eqname/eqname.sty

@@ -3,7 +3,7 @@ Version:	20678
 Release:	2
 Summary:	Name tags for equations
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/eqname/eqname.sty
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gene/eqname/eqname.sty
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqname.r%{version}.tar.xz
 BuildArch:	noarch

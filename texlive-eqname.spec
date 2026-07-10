@@ -1,39 +1,24 @@
-Name:		texlive-eqname
-Version:	20678
-Release:	2
+%global tl_name eqname
+%global tl_revision 79130
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	492
+Release:	%{tl_revision}.1
 Summary:	Name tags for equations
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gene/eqname/eqname.sty
-License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eqname.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gene/eqname
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/eqname.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/eqname.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The \eqname command provides a name tag for the current
-equation, in place of an equation number. The name tag will be
-picked up by a subsequent \label command.
+The \eqname command provides a name tag for the current equation, in
+place of an equation number. The name tag will be picked up by a
+subsequent \label command.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/eqname/eqname.sty
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex %{buildroot}%{_texmfdistdir}
